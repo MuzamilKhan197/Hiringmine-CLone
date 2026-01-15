@@ -6,98 +6,447 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HiringMine Clone</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <!-- ================= Navbar ================= -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid px-5 justify-content-between">
-            <a class="navbar-brand" href="#">
-                <img src="./assets/Hiring Mine Logo.png" alt="Hiringmine Logo" width="186" height="36">
-            </a>
+            <!-- Logo -->
+            <a class="navbar-brand" href="#"><img src="./assets/Hiringmine_text_logo.png" alt="Hiringmine Logo"
+                    width="186" height="36"></a>
+
+            <!-- Navbar toggle button for mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto d-flex flex-column flex-lg-row align-items-center gap-4">
                     <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">People</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Resume Checker</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Video Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#job">Jobs</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Join Now</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link text-primary fw-semibold" href="#">Employee / Post Job</a>
+                    <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="#">Employee / Post Job</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <h1 class="heroHeading">
-            Dig. Apply <br>
-            Prepare Your Future
-        </h1>
+    <!-- ================= Hero Section ================= -->
+    <section class="hero-section text-center">
+        <!-- Main Heading -->
+        <h1 class="heroHeading">Dig. Apply <br> Prepare Your Future</h1>
 
-        <!-- Switch Button -->
+        <!-- Switch button for Hire / Apply -->
         <div class="hero-switch my-4">
             <span class="inactive">HIRE</span>
             <span class="active">APPLY</span>
         </div>
 
-        <!-- Description -->
+        <!-- Description text -->
         <p class="hero-text">
-            Hiring Mine connects employers and job seekers, where employers provide opportunities and job seekers can find and apply for their targeted job.
+            Hiring Mine connects employers and job seekers, providing opportunities to both.
         </p>
 
         <!-- Search Section -->
-        <div class="search-section text-center my-4">
-            <form class="d-flex justify-content-center" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search by Role or Keywords"
-                    aria-label="Search" />
-                <button class="btn btn-primary"><i class="bi bi-search"></i></button>
-            </form>
+        <div class="search-section my-4">
+            <form class="d-flex justify-content-center" role="search"> <input class="form-control me-2" type="search"
+                    placeholder="Search by Role or Keywords" aria-label="Search" /> <button class="btn btn-primary"><i
+                        class="bi bi-search"></i></button> </form>
         </div>
 
-        <!-- Call to Action Button -->
-        <div class="cta-section text-center my-5">
-            <button class="cta-btn">Find Jobs</button>
-        </div>
+        <!-- Call To Action button -->
+        <button class="cta-btn my-5">Find Jobs</button>
 
-        <!-- Popular Searches -->
-        <section class="popular-searches text-center">
-            <h2>Popular Searches</h2>
-            <div class="tags-container">
-                <span class="tag">Software</span>
-                <span class="tag">Developer</span>
-                <span class="tag">Backend</span>
-                <span class="tag">React</span>
-                <span class="tag">Node</span>
-                <span class="tag">React Native</span>
-                <span class="tag">Flutter</span>
-                <span class="tag">UI/UX</span>
-                <span class="tag">Designer</span>
-                <span class="tag">Web</span>
-                <span class="tag">SEO</span>
-                <span class="tag">Marketing</span>
-                <span class="tag">Writer</span>
-            </div>
-        </section>
+        <!-- Popular Searches Section -->
+        <h2 class="popular-searches fs-1">Popular Searches</h2>
+        <div class="tags-container">
+            <span class="tag">Software</span>
+            <span class="tag">Developer</span>
+            <span class="tag">Backend</span>
+            <span class="tag">React</span>
+            <span class="tag">Node</span>
+            <span class="tag">React Native</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">UI/UX</span>
+            <span class="tag">Designer</span>
+            <span class="tag">Web</span>
+            <span class="tag">SEO</span>
+            <span class="tag">Marketing</span>
+            <span class="tag">Writer</span>
+        </div>
     </section>
+
+    <!-- ================= Job Section ================= -->
+    <section id="job" class="job-section py-5">
+        <div class="container">
+            <!-- Section Heading -->
+            <h2 class="fw-bold text-center mb-5 fs-2"><span class="text-purple">Latest And Top</span> Job Openings</h2>
+
+            <!-- Carousel Wrapper -->
+            <div class="job-carousel-wrapper position-relative">
+                <div class="job-carousel d-flex gap-3">
+                    <!-- ================= Job Card 1 ================= -->
+                    <div class="job-card">
+                        <!-- Top Gradient Border -->
+                        <div class="card-top-border"></div>
+
+                        <!-- ATS Badge -->
+                        <span class="badge ats-badge">
+                            <i class="bi bi-lightning-fill"></i> ATS Match Enabled
+                        </span>
+
+                        <!-- Company Logo -->
+                        <div class="job-logo">
+                            <img src="./assets/hiringmine_logo.png" alt="Company Logo">
+                        </div>
+
+                        <!-- Company Name -->
+                        <p class="company">Media Revolution Digital Agency</p>
+
+                        <!-- Job Title -->
+                        <h5 class="job-title">MERN Stack Developer</h5>
+
+                        <!-- Salary Info -->
+                        <p class="salary">No Salary Mentioned</p>
+
+                        <!-- Location & Views -->
+                        <div class="d-flex gap-4 job-info">
+                            <span><i class="bi bi-geo-alt"></i> Karachi, Pakistan</span>
+                            <span><i class="bi bi-eye"></i> 19 views</span>
+                        </div>
+
+                        <!-- Posted Time -->
+                        <p class="time">13 hours ago</p>
+
+                        <!-- Posted By & Applicants -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>posted by<br><strong class="text-primary">Humzashah911</strong></span>
+                            <span class="applied">Applied by: 5</span>
+                        </div>
+
+                        <!-- Open Job Button -->
+                        <button class="btn open-btn w-100">Tap to open quest →</button>
+                    </div>
+
+                    <!-- ================= Job Card 2 ================= -->
+                    <div class="job-card">
+                        <!-- Top Gradient Border -->
+                        <div class="card-top-border"></div>
+
+                        <!-- ATS Badge (hidden if not enabled) -->
+                        <span class="badge ats-badge d-none">
+                            <i class="bi bi-lightning-fill"></i> ATS Match Enabled
+                        </span>
+
+                        <!-- Company Logo -->
+                        <div class="job-logo">
+                            <img src="./assets/hiringmine_logo.png" alt="Company Logo">
+                        </div>
+
+                        <!-- Company Name -->
+                        <p class="company">Tech Solutions</p>
+
+                        <!-- Job Title -->
+                        <h5 class="job-title">Full Stack Developer</h5>
+
+                        <!-- Salary Info -->
+                        <p class="salary">RS 50,000 - 70,000</p>
+
+                        <!-- Location & Views -->
+                        <div class="d-flex gap-4 job-info">
+                            <span><i class="bi bi-geo-alt"></i> Lahore</span>
+                            <span><i class="bi bi-eye"></i> 35 views</span>
+                        </div>
+
+                        <!-- Posted Time -->
+                        <p class="time">10 hours ago</p>
+
+                        <!-- Posted By & Applicants -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>posted by<br><strong class="text-primary">AliTech</strong></span>
+                            <span class="applied">Applied by: 8</span>
+                        </div>
+
+                        <!-- Open Job Button -->
+                        <button class="btn open-btn w-100">Tap to open quest →</button>
+                    </div>
+
+                    <!-- ================= Job Card 3 ================= -->
+                    <div class="job-card">
+                        <!-- Top Gradient Border -->
+                        <div class="card-top-border"></div>
+
+                        <!-- ATS Badge -->
+                        <span class="badge ats-badge">
+                            <i class="bi bi-lightning-fill"></i> ATS Match Enabled
+                        </span>
+
+                        <!-- Company Logo -->
+                        <div class="job-logo">
+                            <img src="./assets/hiringmine_logo.png" alt="Company Logo">
+                        </div>
+
+                        <!-- Company Name -->
+                        <p class="company">Creative Minds</p>
+
+                        <!-- Job Title -->
+                        <h5 class="job-title">UI/UX Designer</h5>
+
+                        <!-- Salary Info -->
+                        <p class="salary">RS 30,000 - 40,000</p>
+
+                        <!-- Location & Views -->
+                        <div class="d-flex gap-4 job-info">
+                            <span><i class="bi bi-geo-alt"></i> Islamabad</span>
+                            <span><i class="bi bi-eye"></i> 12 views</span>
+                        </div>
+
+                        <!-- Posted Time -->
+                        <p class="time">5 hours ago</p>
+
+                        <!-- Posted By & Applicants -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>posted by<br><strong class="text-primary">DesignHub</strong></span>
+                            <span class="applied">Applied by: 3</span>
+                        </div>
+
+                        <!-- Open Job Button -->
+                        <button class="btn open-btn w-100">Tap to open quest →</button>
+                    </div>
+
+
+                    <!-- Carousel navigation buttons -->
+                    <button
+                        class="carousel-prev btn btn-primary position-absolute top-50 start-0 translate-middle-y rounded-pill">‹</button>
+                    <button
+                        class="carousel-next btn btn-primary position-absolute top-50 end-0 translate-middle-y rounded-pill">›</button>
+
+                </div>
+            </div>
+    </section>
+
+    <!--=================Get Hired Section=================-->
+
+    <!-- Heading -->
+    <h2 class="fw-bold text-center fs-1 mb-3">
+        Get Hired In 4 <span class="text-purple">Quick Easy Steps</span>
+    </h2>
+
+    <!-- Description -->
+    <p class="hire-text text-center mb-5">
+        The quickest and the most effective way to get hired by the top firm.
+    </p>
+
+    <!-- Cards Wrapper -->
+    <div class="get-hire-cards d-flex justify-content-center flex-wrap gap-4">
+
+        <!-- Card 1 -->
+        <div class="card hire-card">
+            <div class="hire-icon">
+                <i class="bi bi-person-square"></i>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Create an Account</h5>
+                <p class="card-text">
+                    Join our vibrant community. Create your account and unlock boundless opportunities.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card hire-card">
+            <div class="hire-icon">
+                <i class="bi bi-search"></i>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Search a Job</h5>
+                <p class="card-text">
+                    Discover your ideal job. Our intuitive search feature makes job hunting effortless.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card hire-card">
+            <div class="hire-icon">
+                <i class="bi bi-file-earmark-arrow-up"></i>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Upload CV / Resume</h5>
+                <p class="card-text">
+                    Showcase your expertise. Upload your CV or resume and stand out to employers.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card hire-card">
+            <div class="hire-icon">
+                <i class="bi bi-briefcase"></i>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Get a Job</h5>
+                <p class="card-text">
+                    Achieve your career goals. Apply for jobs and embark on your next adventure.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- ================= Career Options Section ================= -->
+    <section class="career-section py-5">
+        <div class="container">
+
+            <!-- Heading -->
+            <h2 class="fw-bold text-center fs-1 mb-5">
+                <span class="text-purple">Countless Career Options</span>
+                Are Waiting For You To Explore
+            </h2>
+
+            <!-- Cards Grid -->
+            <div class="career-grid">
+
+                <!-- Card 1 -->
+                <div class="career-card">
+                    <i class="bi bi-bar-chart"></i>
+                    <h5>Marketing & Sales</h5>
+                    <p>964 Jobs</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="career-card">
+                    <i class="bi bi-code-slash"></i>
+                    <h5>Development</h5>
+                    <p>668 Jobs</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="career-card">
+                    <i class="bi bi-brush"></i>
+                    <h5>Art & Illustration</h5>
+                    <p>286 Jobs</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="career-card">
+                    <i class="bi bi-cpu"></i>
+                    <h5>Information Tech</h5>
+                    <p>141 Jobs</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="career-card">
+                    <i class="bi bi-people"></i>
+                    <h5>Management</h5>
+                    <p>138 Jobs</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="career-card">
+                    <i class="bi bi-play-circle"></i>
+                    <h5>Animation</h5>
+                    <p>129 Jobs</p>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="career-card">
+                    <i class="bi bi-cash-stack"></i>
+                    <h5>HR & Finance</h5>
+                    <p>110 Jobs</p>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="career-card">
+                    <i class="bi bi-pencil-square"></i>
+                    <h5>Content Creation and Editing</h5>
+                    <p>97 Jobs</p>
+                </div>
+
+            </div>
+
+            <!-- View All -->
+            <div class="text-end mt-4">
+                <a href="#" class="view-all">View All →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= Footer ================= -->
+    <footer class="footer-section text-white pt-5">
+
+        <div class="container">
+            <div class="row gy-4">
+
+                <!-- Left Content -->
+                <div class="col-lg-7 col-md-12">
+                    <h3 class="footer-logo"><img src="./assets/Hiringmine_whitetext_logo.png" alt="hiringmine_logo">
+                    </h3>
+
+                    <p class="footer-tagline">
+                        Built with <span class="heart">❤</span> in Pakistan for the World.
+                    </p>
+
+                    <p class="footer-text">
+                        HiringMine bridges top talent and visionary companies through a smart,
+                        streamlined platform. Empowering candidates to shine, and employers to
+                        hire better — faster. Your next opportunity, powered by technology and trust.
+                    </p>
+                    <h5 class="footer-heading mt-4">Follow US</h5>
+                    <!-- Social Icons -->
+                    <div class="footer-social mt-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-lg-5 col-md-12 text-lg-end footer-contact">
+                    <h5 class="footer-heading">Contact Us</h5>
+
+                    <a href="mailto:portal.hiringmine@gmail.com" class="footer-email">
+                        <i class="bi bi-envelope"></i>
+                        portal.hiringmine@gmail.com
+                    </a>
+
+                    <ul class="footer-links">
+                        <li><a href="#">Life at HiringMine</a></li>
+                        <li><a href="#">About HiringMine</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Bottom Bar -->
+                <div class="footer-bottom mt-5">
+                    <div class="container text-center">
+                        <a href="#">Privacy Policy</a>
+                        <span class="mx-3">|</span>
+                        <a href="#">Terms and Condition</a>
+
+                        <p class="mt-2 mb-0">
+                            Copyright Hiringmine 2026. All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+    </footer>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
